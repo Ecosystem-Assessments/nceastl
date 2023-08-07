@@ -193,13 +193,14 @@ The open-source software R 3.6.0 was used for analyses [@rcoreteam2019] and the 
 # Data availability
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-NOTE: TO BE COMPLETED
+The data used for the cumulative effects assessment of environmental stressors on the food webs of the St. Lawrence System are available through Zenodo (DOI: ) and available at the following link: ***add link***. ***Note:*** *DOI will be added once review process for publication is completed*
+
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 # Code availability
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-The code to reproduce the analyses is available at https://github.com/david-beauchesne/FoodWeb-CumulativeImpact.  The code to produce the stressor layers is available through the eDrivers GitHub organization (https://github.com/eDrivers) and described in @beauchesne2020.  The code to extract traits is available at https://github.com/eBiotic/Traits. The code to produce taxa distribution is available at https://github.com/eBiotic/Biotic. The code to predict species interactions is available at https://github.com/david-beauchesne/Predict_interactions and https://github.com/davidbeauchesne/Interaction_catalog, and described in @beauchesne2016. The code to predict the St. Lawrence metaweb is available at https://github.com/david-beauchesne/MetawebEGSL. The code to evaluate species-specific sensitivities is available at https://github.com/david-beauchesne/Species_Vulnerability. The code to evaluate trophic sensitivity is available at https://github.com/david-beauchesne/FoodWeb-MultiStressors and described in @beauchesne2021. NOTE: Links to be cleaned and updated.
+The code used for this assessment is available through multiple GitHub repositories archived on Zenodo. The code to reproduce the cumulative effects assessment is available at https://github.com/Ecosystem-Assessments/nceastl (DOI: ). The code to produce the stressor layers is available through the *eDrivers* GitHub organization (https://github.com/eDrivers) and described in @beauchesne2020. The code used to extract species traits is available at https://github.com/eBiotic/Traits (DOI: ). The code used to predict taxa distribution is available at https://github.com/eBiotic/Biotic (DOI: ). The code used to predict species interactions is available at https://github.com/david-beauchesne/Predict_interactions (DOI: ) and https://github.com/davidbeauchesne/Interaction_catalog (DOI: ), and described in @beauchesne2016. The code used to predict the St. Lawrence metaweb is available at https://github.com/david-beauchesne/MetawebEGSL (DOI: ). The code to evaluate species-specific sensitivities is available at https://github.com/david-beauchesne/Species_Vulnerability (DOI: ). The code to evaluate trophic sensitivity is available at https://github.com/david-beauchesne/FoodWeb-MultiStressors (DOI: 10.5281/zenodo.5014237) and described in @beauchesne2021. ***Note:*** *DOIs will be added once review process for publication is completed*
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 # Methods references
