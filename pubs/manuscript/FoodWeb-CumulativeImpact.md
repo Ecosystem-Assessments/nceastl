@@ -1,6 +1,6 @@
 ---
 title: Ecological interactions amplify cumulative effects in marine ecosystems
-author: David Beauchesne^1,2\*^, Kevin Cazelles^3^, Rémi M. Daigle^4,5^, Dominique Gravel^6^, Philippe Archambault^2^
+author: David Beauchesne^1,2\*^, Kevin Cazelles^3^, Rémi M. Daigle^4,5^, Dominique Gravel^6^, Philippe Archambault^2,7^
 fontsize: 12pt
 output:
   pdf_document:

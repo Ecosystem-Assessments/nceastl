@@ -1,5 +1,5 @@
 ---
-title: Interactions amplify cumulative effects in marine ecosystems
+title: Ecological interactions amplify cumulative effects in marine ecosystems
 fontsize: 12pt
 output:
   pdf_document:
@@ -44,15 +44,16 @@ rmarkdown::render('./FoodWeb-CumulativeImpact-SI.md', output_format = "word_docu
 -->
 
 \begin{center}
-David Beauchesne$^{1,2\*}$, Kevin Cazelles$^3$, Rémi M. Daigle${^4,5}$, Dominique Gravel$^6$, Philippe Archambault$^2$
+David Beauchesne$^{1,2\*}$, Kevin Cazelles$^3$, Rémi M. Daigle$^{4,5}$, Dominique Gravel$^6$, Philippe Archambault$^{2,7}$
 \end{center} 
 
 ^1^Department of Health and Society, University of Toronto, Toronto, ON, Canada \newline
 ^2^Québec Océan, Département de biologie, Université Laval, Québec, QC, Canada \newline
-^3^Department of Integrative Biology, University Of Guelph, Guelph, Ontario, Canada N1G 2W1 \newline
+^3^Department of Integrative Biology, University of Guelph, Guelph, Ontario, Canada N1G 2W1 \newline
 ^4^Bedford Institute of Oceanography, Fisheries and Oceans Canada, Dartmouth, NS, B2Y 4A2 \newline
 ^5^Marine Affairs Program, Dalhousie University, Halifax, NS, B3H 4R2 \newline
 ^6^Département de biologie, Université de Sherbrooke, Sherbrooke, QC, Canada \newline
+^7^Takuvik International Research Laboratory, CNRS/Université Laval, ArcticNet Québec, Canada \newline
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->

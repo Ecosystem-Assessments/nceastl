@@ -78,5 +78,5 @@ pipeline <- function() {
   
   ## Publications 
   render_ms(TRUE)
-  render_ms_supmat(TRUE)
+  render_ms_supmat()
 }
