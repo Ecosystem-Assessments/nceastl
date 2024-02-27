@@ -362,7 +362,7 @@ fig_ncea <- function() {
 
   # Letter
   pos <- par("usr")
-  text(x = pos[1] + (pos[2]-pos[1])*0.035, y = pos[4] - (pos[4]-pos[3])*0.015, labels = 'a', cex = 1.5, font = 2)
+  text(x = pos[1] + (pos[2]-pos[1])*0.035, y = pos[4] - (pos[4]-pos[3])*0.015, labels = 'A', cex = 1.5, font = 2)
 
   # dev.off()
 }

@@ -775,15 +775,15 @@ fig_method2 <- function() {
   text(x = mean(x), y = .085, adj = .5, cex = .25, labels = latex2exp::TeX("\\textit{\\sum / n}"))
   
   # Letters
-  text(x = -1.045, y = .98, labels = "a", font = 2, cex = .45)
-  text(x = -1.045, y = .66, labels = "b", font = 2, cex = .45)
-  text(x = -1.045, y = .2, labels = "c", font = 2, cex = .45)
-  text(x = -.625, y = .59, labels = "d", font = 2, cex = .45)
-  text(x = -.55, y = .52, labels = "e", font = 2, cex = .45)
-  text(x = -.625, y = .975, labels = "f", font = 2, cex = .45)
-  text(x = -.22, y = .21, labels = "g", font = 2, cex = .45)
-  text(x = 0.27, y = .85, labels = "h", font = 2, cex = .45)
-  text(x = 0.27, y = .3, labels = "i", font = 2, cex = .45)
+  text(x = -1.045, y = .98, labels = "A", font = 2, cex = .45)
+  text(x = -1.045, y = .66, labels = "B", font = 2, cex = .45)
+  text(x = -1.045, y = .2, labels = "C", font = 2, cex = .45)
+  text(x = -.625, y = .59, labels = "D", font = 2, cex = .45)
+  text(x = -.55, y = .52, labels = "E", font = 2, cex = .45)
+  text(x = -.625, y = .975, labels = "F", font = 2, cex = .45)
+  text(x = -.22, y = .21, labels = "G", font = 2, cex = .45)
+  text(x = 0.27, y = .85, labels = "H", font = 2, cex = .45)
+  text(x = 0.27, y = .3, labels = "I", font = 2, cex = .45)
   
   dev.off()
   
