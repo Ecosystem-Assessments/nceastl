@@ -58,9 +58,9 @@ rmarkdown::render('./FoodWeb-CumulativeImpact.md', output_format = "word_documen
 
 <!-- The abstract should be 100-125 words and organized in this structure: an opening sentence that sets the question that you address and is comprehensible to the general reader, background content specific to this study, results, and a concluding sentence. It should be a single paragraph. -->
 
-**Abstract:** The Convention on Biological Diversity is setting ambitious goals for preserving biodiversity, the first of which states that the integrity of ecosystems must be enhanced. This recognizes that biodiversity is not a mere collection of species; it also includes the diversity of interactions driving ecological dynamics and ecosystem functioning. Yet management still overwhelmingly operates in silos, focusing on single stressor and species. Here, we assess the cumulative effects of climate change and human activities on species of the St. Lawrence marine ecosystem in eastern Canada using a novel approach that explicitly considers the web of interactions structuring communities. We uncover cumulative effects that would otherwise be overlooked if species interactions were ignored, particularly for fishes and marine mammals, many of which are exploited or endangered. This suggests that management plans and recovery strategies may be ignoring significant threats by overlooking species interactions. Our approach is, to our knowledge, the first ecosystem-based approach relevant to the management of exploited and endangered species which can evaluate the less obvious yet no less significant effects arising from species interactions in a multiple stressors framework.
+**Abstract:** Biodiversity is not a mere collection of species; it also includes the diversity of interactions driving ecological dynamics and ecosystem functioning. Still, management overwhelmingly operates in silos, focusing on single stressor and species. Here, we assess the cumulative effects of climate change and human activities on species of the St. Lawrence marine ecosystem in eastern Canada using a novel approach that explicitly considers the less obvious yet no less significant effects arising from species interactions in a multiple stressors framework. We uncover cumulative effects that would otherwise be overlooked, particularly for fishes and marine mammals, many of which are exploited or endangered. This suggests that management plans and recovery strategies may be ignoring significant threats by overlooking species interactions. 
 
-<!-- 182 words -->
+<!-- Biodiversity is not a mere collection of species; it also includes the diversity of interactions driving ecological dynamics and ecosystem functioning. Still, management overwhelmingly operates in silos, focusing on single stressor and species. Here, we assess the cumulative effects of climate change and human activities on species of the St. Lawrence marine ecosystem in eastern Canada using a novel approach that explicitly considers the web of interactions structuring communities. We uncover cumulative effects that would otherwise be overlooked, particularly for fishes and marine mammals, many of which are exploited or endangered. This suggests that management plans and recovery strategies may be ignoring significant threats by overlooking species interactions. We propose, to our knowledge, the first ecosystem-based approach relevant to species management which can evaluate the less obvious yet no less significant effects arising from species interactions in a multiple stressors framework. -->
  
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <!-- # Main text -->
@@ -136,11 +136,11 @@ In pairing theory, environmental management and computational capabilities, our 
 
 **Funding:** We thank the Fond de Recherche Québécois Nature et Technologie (FRQNT) and the Natural Science and Engineering Council of Canada (CRSNG) for financial support. This project is supported by Québec Océan, the Quebec Centre for Biodiversity Science (QCBS) and Takuvik networks. This research is also sponsored by the NSERC Canadian Healthy Oceans Network and its Partners: Department of Fisheries and Oceans Canada and INREST (representing the Port of Sept-Îles and City of Sept-Îles). This research was enabled in part by support provided by WestGrid (www.westgrid.ca) and Compute Canada (www.computecanada.ca). 
 
-We thank L. Tréau de Coeli for support in curating biotic datasets, and P. Calosi and C. Carrier-Belleau for support in ascribing sensitivities to traits.
+**Export support:** We thank L. Tréau de Coeli for support in curating biotic datasets, and P. Calosi and C. Carrier-Belleau for support in ascribing sensitivities to traits.
 
-**Author contribution:** DB, DG, and PA conceived the manuscript and the underlying objectives. DB prepared/formatted the data, performed the analyses, was in charge of technical developments and led the drafting of the manuscript. KC and RD contributed to technical developments and analyses for the manuscript. All co-authors contributed to the revision of the manuscript.
+**Author contribution:** DB, DG, and PA conceived the manuscript and the underlying objectives. DB prepared/formatted the data, performed the analyses, oversaw technical developments and led the drafting of the manuscript. KC and RD contributed to technical developments and analyses for the manuscript. All co-authors contributed to the revision of the manuscript.
 
-**Competing interest declaration:** .The authors declare no competing interests
+**Competing interest declaration:** The authors declare no competing interests.
 
 **Data and materials availability:** The data used for the cumulative effects assessment of environmental stressors on the food webs of the St. Lawrence marine ecosystem are available through Zenodo (DOI: ) and available at the following link: ***add link***. The code used for this assessment is available through multiple GitHub repositories archived on Zenodo. The code to reproduce the cumulative effects assessment is available at https://github.com/Ecosystem-Assessments/nceastl (DOI: ). The code to produce the stressor layers is available through the *eDrivers* GitHub organization (https://github.com/eDrivers) and described in @beauchesne2020. The code used to extract species traits is available at https://github.com/eBiotic/Traits (DOI: ). The code used to predict taxa distribution is available at https://github.com/eBiotic/Biotic (DOI: ). The code used to predict species interactions is available at https://github.com/david-beauchesne/Predict_interactions (DOI: ) and https://github.com/davidbeauchesne/Interaction_catalog (DOI: ), and described in @beauchesne2016. The code used to predict the St. Lawrence metaweb is available at https://github.com/david-beauchesne/MetawebEGSL (DOI: ). The code to evaluate species-specific sensitivities is available at https://github.com/david-beauchesne/Species_Vulnerability (DOI: ). The code to evaluate trophic sensitivity is available at https://github.com/david-beauchesne/FoodWeb-MultiStressors (DOI: 10.5281/zenodo.5014237) and described in @beauchesne2021. ***Note:*** *DOIs will be added once review process for publication is completed*
 
@@ -256,19 +256,19 @@ The open-source software R 4.2.3 was used for all analyses [@rcoreteam2023] and 
 <!-- # Supplementary tables -->
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-**Table S1.** Stressors data.** List of stressors used to perform the cumulative effects assessment [@beauchesne2020].
+**Table S1.** List of stressors used to perform the cumulative effects assessment [@beauchesne2020].
 
-**Table S2.** Biotic data.** List of biotic data used to obtain species list and occurrences. Except for IUCN data, monitoring programs are all conducted or managed by the Government of Canada's Department of Fisheries and Oceans (DFO).
+**Table S2.** List of biotic data used to obtain species list and occurrences. Except for IUCN data, monitoring programs are all conducted or managed by the Government of Canada's Department of Fisheries and Oceans (DFO).
 
-**Table S3.** Taxa list. List of taxa included in the assessment with occurrences and absences from biotic data, and assessment of sensitibity, specificity, accuracy and True Skilled Statitics (TSS) of species distribution modeling.
+**Table S3.** List of taxa included in the assessment with occurrences and absences from biotic data, and assessment of sensitivity, specificity, accuracy and True Skilled Statitics (TSS) of species distribution modeling.
 
-**Table S4.** Abiotic data.** List of abiotic descriptors used to extrapolate and map taxa distribution in the St. Lawrence marine ecosystem.
+**Table S4.** List of abiotic descriptors used to extrapolate and map taxa distribution in the St. Lawrence marine ecosystem.
 
-**Table S5.** Traits. List of traits used to characterize the relative species-specific sensitivity of taxa to stressors and description of each trait category.
+**Table S5.** List of traits used to characterize the relative species-specific sensitivity of taxa to stressors and description of each trait category.
 
-**Table S6.** Species-specific sensitivity.**** Trait matching rules between stressors and traits to assess the relative species-specific sensitivity scores for each stressor.
+**Table S6.** Trait matching rules between stressors and traits to assess the relative species-specific sensitivity scores for each stressor.
 
-**Table S7.** R packages.** List of R packages used listed in alphabetical order. All analyses were carried out with the R programming language version 4.2.3 [@rcoreteam2023].
+**Table S7.** List of R packages used listed in alphabetical order. All analyses were carried out with the R programming language version 4.2.3 [@rcoreteam2023].
 
 
 R Packages [@dossantos2022; @beauchesne2020a; @ross2022; @bache2022; @cazelles2023; @liaw2002; @hijmans2023; @beauchesne2023; @boettiger2012; @poelen2022a; @xie2018; @xie2020; @allaire2023; @pebesma2018; @pebesma2023; @bivand2013; @pebesma2005; @pebesma2022; @chamberlain2013; @chamberlain2020a; @wickham2019; @chamberlain2020].

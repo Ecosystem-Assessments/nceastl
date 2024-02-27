@@ -32,7 +32,7 @@ header-includes:
    - \lefthyphenmin=62
    - \usepackage{cite}
 # bibliography: FoodWeb-CumulativeImpact-SI.bib
-# csl: frontiers.csl
+csl: science.csl
 # link-citations: yes
 # relativeurls: true
 # nocite: '@*'
@@ -306,7 +306,7 @@ kableExtra::kable(obs, "latex", booktabs = T)
 
 
 
-\textbf{Supplementary Table 1 | Taxa list.} List of taxa included in the assessment with occurrences and absences from biotic data, and assessment of sensitibity, specificity, accuracy and True Skilled Statitics (TSS) of species distribution modeling.
+\textbf{Supplementary Table 1 | Taxa list.} List of taxa included in the assessment with occurrences and absences from biotic data, and assessment of sensitibity, specificity, accuracy and True Skilled Statistics (TSS) of species distribution modeling.
 
 \begin{singlespace}
 {\fontsize{9}{11}\selectfont
