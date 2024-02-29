@@ -69,7 +69,7 @@ fig_species_spatial <- function() {
   mat <- matrix(1:6, nrow = 2)
 
   # png(here::here(out, 'species_spatial.png'), res = 300, width = 300, height = 200, units = "mm")
-  png(here::here(out, "species_spatial.png"), res = 300, width = 300, height = 135, units = "mm")
+  png(here::here(out, "species_spatial.png"), res = 300, width = 300, height = 180, units = "mm")
   layout(mat)
 
   # Plot network-scale CEA
