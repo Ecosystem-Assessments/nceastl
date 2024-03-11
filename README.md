@@ -1,4 +1,4 @@
-# :book: Interactions amplify cumulative effects in marine food webs
+# :book: Interactions amplify cumulative effects in marine food webs <img src='man/figures/logo.png' align="right" height="175" />
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8222068.svg)](https://doi.org/10.5281/zenodo.8222068)
 

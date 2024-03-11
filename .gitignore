@@ -51,10 +51,13 @@ vignettes/*.pdf
 data/
 output/
 submission/
-figures/
+
 
 ## Ignore specific file types
 *.pdf
 *.docx
 *.sh
 *.zip
+*.png
+
+!man/figures/logo.png
