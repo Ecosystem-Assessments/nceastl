@@ -68,8 +68,7 @@ fig_species_spatial <- function() {
   # mat <- matrix(1:9, nrow = 3)
   mat <- matrix(1:6, nrow = 2)
 
-  # png(here::here(out, 'species_spatial.png'), res = 300, width = 300, height = 200, units = "mm")
-  png(here::here(out, "species_spatial.png"), res = 300, width = 300, height = 180, units = "mm")
+  png(here::here(out, "species_spatial.png"), res = 300, width = 300, height = 200, units = "mm")
   layout(mat)
 
   # Plot network-scale CEA
@@ -130,13 +129,18 @@ fig_species_spatial <- function() {
     maxVal <- c(maxValue(di[[sp[i]]]), maxValue(ce[[sp[i]]]))
 
     par(mar = c(4.5, 4.5, 2, 2))
-    plot0(x = c(0, 1))
-    axis(1, at = seq(0, 1, length.out = 5), labels = seq(0, ceiling(maxVal[1]), length.out = 5))
-    axis(2, at = seq(0, 1, length.out = 5), labels = seq(0, ceiling(maxVal[2]), length.out = 5))
+    # plot0(x = c(0, 1))
+    plot0(x = c(0, maxVal[1]), y = c(0, maxVal[2]))
+    # axis(1, at = seq(0, 1, length.out = 5), labels = seq(0, ceiling(maxVal[1]), length.out = 5))
+    # axis(2, at = seq(0, 1, length.out = 5), labels = seq(0, ceiling(maxVal[2]), length.out = 5))
+    axis(1, at = seq(0, maxVal[1], length.out = 5), labels = seq(0, ceiling(maxVal[1]), length.out = 5))
+    axis(2, at = seq(0, maxVal[2], length.out = 5), labels = seq(0, ceiling(maxVal[2]), length.out = 5))
     mtext(side = 1, text = "Species-scale cumulative effects", line = 2.5, font = 1, cex = .7)
     mtext(side = 2, text = "Network-scale cumulative effects", line = 2.5, font = 1, cex = .7)
-    points(x = dat1 / maxVal[1], y = dat2 / maxVal[2], pch = 20, col = "#00000077", cex = .15)
-    lines(x = c(0, 1), y = c(0, 1), col = "#EEB956", lwd = 3)
+    # points(x = dat1 / maxVal[1], y = dat2 / maxVal[2], pch = 20, col = "#00000077", cex = .15)
+    points(x = dat1, y = dat2, pch = 20, col = "#00000077", cex = .15)
+    # lines(x = c(0, 1), y = c(0, 1), col = "#EEB956", lwd = 3)
+    lines(x = c(0, maxVal[1]), y = c(0, maxVal[1]), col = "#EEB956", lwd = 3)
 
     # Letter
     # mtext(side = 2, at = 1.02, text = 'b', cex = 1.3, font = 2, las = 2, line = 4)

@@ -103,8 +103,10 @@ fig_comparison <- function() {
   # WARNING: 1:1 line, to review this does not make any sense to me anymore
   uid <- cekm$cea == max(cekm$cea, na.rm = TRUE)
   lines(x = c(0, cekm$cea[uid]), y = c(0, cekm$ncea[uid]), lty = 2, col = "#EEB95699", lwd = 3)
-  lines(x = c(0, max(cekm$cea)), y = c(0, max(cekm$ncea)), lwd = 3, lty = 3, col = "#00000066")
-  text(x = 2.45, y = 3.13, labels = "Relative 1:1 line", adj = c(0, .5), srt = 35, col = "#000000CC")
+  lines(x = c(0, max(cekm$cea)), y = c(0, max(cekm$cea)), lwd = 3, lty = 3, col = "#00000066")
+  # lines(x = c(0, max(cekm$cea)), y = c(0, max(cekm$ncea)), lwd = 3, lty = 3, col = "#00000066")
+  # text(x = 2.45, y = 3.13, labels = "Relative 1:1 line", adj = c(0, .5), srt = 35, col = "#000000CC")
+  text(x = 2.45, y = 2.35, labels = "1:1 line", adj = c(0, .5), srt = 30, col = "#000000CC")
   text(x = 2.7, y = 1.25, labels = "Direct effects baseline", adj = c(1, .5), srt = 15, col = "#EEB956")
 
   # Weight to make points bigger
