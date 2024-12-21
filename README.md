@@ -7,7 +7,6 @@ This is the research compendium for the cumulative effects of glob al changes on
 It includes the code that we used for the manuscript: "Interactions amplify cumulative effects in marine food webs".
 
 - Publication: [DOI: ](link)
-- Preprint: [DOI: ](link)
-- Data: [DOI: ](link)
+- Data: [DOI: 10.5281/zenodo.14537123](https://doi.org/10.5281/zenodo.14537123)
 - Code: [DOI: 10.5281/zenodo.8222068](https://doi.org/10.5281/zenodo.8222068)
 
