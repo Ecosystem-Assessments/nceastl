@@ -233,7 +233,7 @@ The open-source software R 4.2.3 was used for all analyses [@rcoreteam2023] and 
 
 **Competing interest declaration:** The authors declare no competing interests.
 
-**Data and materials availability:** The data used for the cumulative effects assessment of environmental stressors on the food webs of the St. Lawrence marine ecosystem are available through Zenodo (DOI: 10.5281/zenodo.14537123). The code to reproduce the cumulative effects assessment is available at https://github.com/Ecosystem-Assessments/nceastl (DOI: 10.5281/zenodo.8222068). 
+**Data and materials availability:** The data used for the cumulative effects assessment of environmental stressors on the food webs of the St. Lawrence marine ecosystem are available through Zenodo (DOI: 10.5281/zenodo.14537123). The code to reproduce the cumulative effects assessment is available at https://github.com/Ecosystem-Assessments/nceastl (DOI: 10.5281/zenodo.14549546). 
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 # Supplementary Materials
