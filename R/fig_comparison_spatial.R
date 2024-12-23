@@ -5,7 +5,6 @@ fig_comparison_spatial <- function() {
   # Libraries
   library(raster)
   library(sf)
-  library(graphicsutils)
   library(tidyverse)
   param()
   load("./Data/Spatial/egslSimple.RData") # Simple EGSL geometry
@@ -117,7 +116,7 @@ fig_comparison_spatial <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~#
   # Plot biplot
   par(mar = c(4.5, 4.5, 2, 2))
-  plot0(x = c(0, maxVal[1]), y = c(0, maxVal[2]))
+  graphicsutils::plot0(x = c(0, maxVal[1]), y = c(0, maxVal[2]))
   # plot0(x = c(0, 1))
   axis(1, at = seq(0, maxVal[1], length.out = 5), labels = seq(0, ceiling(maxVal[1]), length.out = 5))
   axis(2, at = seq(0, maxVal[2], length.out = 5), labels = seq(0, ceiling(maxVal[2]), length.out = 5))

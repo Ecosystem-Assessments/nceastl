@@ -125,7 +125,7 @@ plotEGSL <- function(layers     = 'egslOutline',
 
   # Initiate plot
   par(mar = mar)
-  plot0(x = ext[c(1,3)],
+  graphicsutils::plot0(x = ext[c(1,3)],
         y = ext[c(2,4)],
         fill = background,
         grid.col = graticules)

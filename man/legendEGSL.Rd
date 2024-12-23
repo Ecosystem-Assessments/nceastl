@@ -37,9 +37,9 @@ Function to create legend for the St. Lawrence base map \code{plotEGSL()}.
 }
 \examples{
 plotEGSL()
-legendEGSL(mainTitle = 'Acidification', subTitle = expression(Aragonite~(m^2)))
+legendEGSL(mainTitle = "Acidification", subTitle = expression(Aragonite ~ (m^2)))
 
-plotEGSL2('webdriver', driver = 'aquacultureInv')
+plotEGSL2("webdriver", driver = "aquacultureInv")
 }
 \keyword{lawrence}
 \keyword{plot,}

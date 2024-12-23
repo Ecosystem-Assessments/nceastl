@@ -1,43 +1,73 @@
 # Base R Shiny image
 FROM rocker/r-base:4.4.0
 
+ARG GITHUB_PAT
+ENV GITHUB_PAT=${GITHUB_PAT}
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     libproj-dev \
     libudunits2-dev \
     libgdal-dev \ 
-    libgeos-dev
+    libgeos-dev \
+    libarchive-dev \
+    libfontconfig1-dev \
+    libmagick++-dev \
+    libfreetype6-dev
 
-RUN install2.r remotes 
+RUN apt-get install -y --no-install-recommends \    
+    r-cran-devtools \
+    r-cran-tidyverse 
 
+RUN apt-get install -y --no-install-recommends \  
+    r-cran-bibtex \
+    r-cran-data.table \
+    r-cran-here \
+    r-cran-ragg \
+    r-cran-randomforest \
+    r-cran-raster \
+    r-cran-rmarkdown \
+    r-cran-magick \
+    r-cran-plotrix \
+    r-cran-sf \
+    r-cran-stars \
+    r-cran-terra
+
+RUN apt-get install -y --no-install-recommends \  
+    r-cran-rcpparmadillo \
+    r-cran-viridis \
+    r-cran-bookdown
+
+# RUN install2.r remotes 
+
+# RUN Rscript -e 'remotes::install_version("devtools", upgrade = "never", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
+# RUN Rscript -e 'remotes::install_version("tidyverse", upgrade = "never", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
+# RUN Rscript -e 'remotes::install_version("bibtex", upgrade = "never", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
+# RUN Rscript -e 'remotes::install_version("data", upgrade = "never", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
+# RUN Rscript -e 'remotes::install_version("here", upgrade = "never", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
+# RUN Rscript -e 'remotes::install_version("ragg", upgrade = "never", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
+# RUN Rscript -e 'remotes::install_version("randomforest", upgrade = "never", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
+# RUN Rscript -e 'remotes::install_version("raster", upgrade = "never", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
+# RUN Rscript -e 'remotes::install_version("rmarkdown", upgrade = "never", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
+# RUN Rscript -e 'remotes::install_version("magick", upgrade = "never", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
+# RUN Rscript -e 'remotes::install_version("plotrix", upgrade = "never", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
+# RUN Rscript -e 'remotes::install_version("sf", upgrade = "never", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
+# RUN Rscript -e 'remotes::install_version("stars", upgrade = "never", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
+# RUN Rscript -e 'remotes::install_version("terra", upgrade = "never", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
+
+
+RUN Rscript -e 'remotes::install_version("archive", upgrade = "never", version = "1.1.10", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
+RUN Rscript -e 'remotes::install_version("RefManageR", upgrade = "never", version = "1.4.0", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
 RUN Rscript -e 'remotes::install_version("colorspace", upgrade = "never", version = "2.1-1", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
-RUN Rscript -e 'remotes::install_version("data.table", upgrade = "never", version = "1.16.4", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
-RUN Rscript -e 'remotes::install_version("dplyr", upgrade = "never", version = "1.1.4", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
-RUN Rscript -e 'remotes::install_version("exactextractr", upgrade = "never", version = "0.10.0", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
-RUN Rscript -e 'remotes::install_version("fasterize", upgrade = "never", version = "1.1.0", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
-RUN Rscript -e 'remotes::install_version("fs", upgrade = "never", version = "1.6.5", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
 RUN Rscript -e 'remotes::install_version("globe", upgrade = "never", version = "1.2-0", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
-RUN Rscript -e 'remotes::install_version("glue", upgrade = "never", version = "1.8.0", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
-RUN Rscript -e 'remotes::install_version("here", upgrade = "never", version = "1.0.1", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
 RUN Rscript -e 'remotes::install_version("latex2exp", upgrade = "never", version = "0.9.6", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
-RUN Rscript -e 'remotes::install_version("magick", upgrade = "never", version = "2.8.5", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
-RUN Rscript -e 'remotes::install_version("magrittr", upgrade = "never", version = "2.0.3", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
-RUN Rscript -e 'remotes::install_version("plotrix", upgrade = "never", version = "3.8-4", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
-RUN Rscript -e 'remotes::install_version("purrr", upgrade = "never", version = "1.0.2", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
-RUN Rscript -e 'remotes::install_version("randomForest", upgrade = "never", version = "4.7-1.2", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
-RUN Rscript -e 'remotes::install_version("raster", upgrade = "never", version = "3.6-30", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
-RUN Rscript -e 'remotes::install_version("rmarkdown", upgrade = "never", version = "2.29", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
-RUN Rscript -e 'remotes::install_version("sf", upgrade = "never", version = "1.0-19", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
-RUN Rscript -e 'remotes::install_version("stars", upgrade = "never", version = "0.6-7", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
-RUN Rscript -e 'remotes::install_version("stringr", upgrade = "never", version = "1.5.1", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
-RUN Rscript -e 'remotes::install_version("tidyverse", upgrade = "never", version = "2.0.0", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
-RUN Rscript -e 'remotes::install_version("units", upgrade = "never", version = "0.8-5", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
-RUN Rscript -e 'remotes::install_version("viridis", upgrade = "never", version = "0.6.5", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
-RUN Rscript -e 'remotes::install_version("vroom", upgrade = "never", version = "1.6.5", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
-RUN Rscript -e 'remotes::install_version("whisker", upgrade = "never", version = "0.4.1", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
-RUN Rscript -e 'remotes::install_version("yaml", upgrade = "never", version = "2.3.10", repos = "https://packagemanager.posit.co/cran/__linux__/jammy/latest")'
 
+
+WORKDIR /usr
 COPY . ./
 
-RUN Rscript -e 'remotes::install_deps()'
+RUN Rscript -e  'remotes::install_github("VLucet/rgovcan", upgrade = "never")'
+RUN Rscript -e 'remotes::install_deps(upgrade = "never")'
+
+
+ENTRYPOINT ["bash"]

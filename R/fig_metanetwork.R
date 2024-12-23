@@ -6,10 +6,8 @@ fig_metanetwork <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
   # Libraries
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
-  library(magrittr)
   library(raster)
   library(tidyverse)
-  library(graphicsutils)
   param()
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
@@ -285,7 +283,7 @@ fig_metanetwork <- function() {
 
   # Plot
   par(mar = c(2, 2, 2, 2), bg = "#ffffff")
-  plot0(x = c(-1.1, 1.1))
+  graphicsutils::plot0(x = c(-1.1, 1.1))
 
   # Adjust some group names
   uid <- metanetwork$networkGroup$Var1 == "Others2"

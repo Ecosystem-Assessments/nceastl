@@ -29,7 +29,7 @@ Imports:
     glue,
     graphicsutils,
     here,
-    iEat,
+    hexSticker,
     latex2exp,
     magick,
     magrittr,
