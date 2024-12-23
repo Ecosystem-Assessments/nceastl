@@ -41,7 +41,7 @@ plotMetanetwork <- function(metanetwork,
 
     # Plot
     par(mar = c(0,0,0,0))
-    plot0()
+    graphicsutils::plot0()
     boxGroup(metanetwork,
              rad1 = rad1,
              colBox = metanetwork$networkGroup$cols,

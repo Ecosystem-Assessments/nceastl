@@ -6,7 +6,6 @@ fig_comparison_spatial_direct_indirect <- function() {
   library(stars)
   library(raster)
   library(sf)
-  library(graphicsutils)
   library(tidyverse)
   param()
   load("./Data/Spatial/egslSimple.RData") # Simple EGSL geometry
@@ -49,7 +48,7 @@ fig_comparison_spatial_direct_indirect <- function() {
   )
 
   image(drivers, col = viridis::magma(100), add = T, zlim = c(0, max(drivers[[1]], na.rm = TRUE)))
-  plot(st_geometry(egslSimple), col = "transparent", border = focus, lwd = .75, add = T)
+  plot(st_geometry(egslSimple), col = "transparent", border = focus, lwd = .75, add = TRUE)
   legendEGSL(
     range = c(0, max(drivers[[1]], na.rm = TRUE)), pal = viridis::magma, cexMain = .9, cexSub = .65, n = 5,
     mainTitle = "Cumulative stressors"
@@ -75,7 +74,7 @@ fig_comparison_spatial_direct_indirect <- function() {
   )
 
   image(species, col = viridis::viridis(100), add = T, zlim = c(0, max(species[[1]], na.rm = TRUE)))
-  plot(st_geometry(egslSimple), col = "transparent", border = focus, lwd = .75, add = T)
+  plot(st_geometry(egslSimple), col = "transparent", border = focus, lwd = .75, add = TRUE)
   legendEGSL(
     range = c(0, max(species[[1]], na.rm = TRUE)), pal = viridis::viridis, cexMain = .9, cexSub = .65, n = 5,
     mainTitle = "Species richness"
@@ -97,13 +96,13 @@ fig_comparison_spatial_direct_indirect <- function() {
     borders = c("#00000000"),
     lwds = c(.75),
     mar = c(2, 2, 2, 2),
-    northArrow = F,
+    northArrow = FALSE,
     prj = prj,
     extent = extFig
   )
 
   image(direct, col = palImpact(100), add = T, zlim = c(0, maxVal[1]))
-  plot(st_geometry(egslSimple), col = "transparent", border = focus, lwd = .75, add = T)
+  plot(st_geometry(egslSimple), col = "transparent", border = focus, lwd = .75, add = TRUE)
   legendEGSL(
     range = c(0, maxVal[1]), pal = palImpact, cexMain = .9, cexSub = .65, n = 5,
     mainTitle = "Direct cumulative effects"
@@ -129,7 +128,7 @@ fig_comparison_spatial_direct_indirect <- function() {
   )
 
   image(indirect, col = palImpact(100), add = T, zlim = c(0, maxVal[2]))
-  plot(st_geometry(egslSimple), col = "transparent", border = focus, lwd = .75, add = T)
+  plot(st_geometry(egslSimple), col = "transparent", border = focus, lwd = .75, add = TRUE)
   legendEGSL(
     range = c(0, maxVal[2]), pal = palImpact, cexMain = .9, cexSub = .65, n = 5,
     mainTitle = "Indirect cumulative effects"
@@ -164,7 +163,7 @@ fig_comparison_spatial_direct_indirect <- function() {
   R <- c(min(diff[[1]], na.rm = TRUE), max(diff[[1]], na.rm = TRUE))
   image(diff, col = pal1(100), zlim = c(0, rMax), add = TRUE)
   image(diff, col = pal2(100), zlim = c(-rMax, 0), add = TRUE)
-  plot(st_geometry(egslSimple), col = "transparent", border = focus, lwd = .75, add = T)
+  plot(st_geometry(egslSimple), col = "transparent", border = focus, lwd = .75, add = TRUE)
 
   # Legend
   plot_legend_dual(
@@ -183,7 +182,7 @@ fig_comparison_spatial_direct_indirect <- function() {
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~#
   # Plot biplot
   par(mar = c(4.5, 4.5, 2, 2))
-  plot0(x = c(0, maxVal[1]), y = c(0, maxVal[2]))
+  graphicsutils::plot0(x = c(0, maxVal[1]), y = c(0, maxVal[2]))
   axis(1, at = seq(0, maxVal[1], length.out = 5), labels = seq(0, ceiling(maxVal[1]), length.out = 5))
   axis(2, at = seq(0, maxVal[2], length.out = 5), labels = seq(0, ceiling(maxVal[2]), length.out = 5))
   mtext(side = 1, text = "Direct cumulative effect", line = 2.5, font = 2)

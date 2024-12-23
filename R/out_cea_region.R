@@ -6,7 +6,6 @@ out_cea_region <- function() {
   # Libraries
   library(raster)
   library(sf)
-  library(sp)
 
   # Data
   load('./Data/Spatial/egslSub.RData')

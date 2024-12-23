@@ -6,10 +6,8 @@ fig_metanetwork_xl <- function() {
   #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
   # Libraries
   #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
-  library(magrittr)
   library(raster)
   library(tidyverse)
-  library(graphicsutils)
   param()
   
   #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
@@ -294,7 +292,7 @@ fig_metanetwork_xl <- function() {
   
   # Plot
   par(mar = c(0,0,0,0), bg = "#ffffff")
-  plot0(x = c(-1.1, 1.1))
+  graphicsutils::plot0(x = c(-1.1, 1.1))
   
   # Adjust some group names
   uid <- metanetwork$networkGroup$Var1 == "Others2"
@@ -354,7 +352,7 @@ fig_metanetwork_xl <- function() {
 
   # Plot
   par(mar = c(.5,.5,.5,.5), bg = "#ffffff")
-  plot0(x = c(1,13.75), y = c(3,-31))
+  graphicsutils::plot0(x = c(1, 13.75), y = c(3, -31))
   
   # Labels
   labs <- dplyr::left_join(labs, drList[,c("drivers","full")], by = c("name" = "drivers")) |>

@@ -1,10 +1,11 @@
 #' Pipeline to execute full cumulative effects assessment.
 #'
+#' @importFrom magrittr `%>%`
 #' @export
 
 pipeline <- function() {
-  # Prepare data for the assessment
-  format_data()
+  # Prepare data for the assessment (run locally)
+  # format_data()
 
   # Assessment
   # ----------------------------------------------------------------------------------------

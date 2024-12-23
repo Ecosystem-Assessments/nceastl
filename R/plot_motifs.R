@@ -183,12 +183,10 @@ plotMotifs <- function(motif, position = '', path = '', x = 0, y = 0,
 
     # Lines
     l <- data.frame(x1 = numeric(), x2 = numeric(), y1 = numeric(), y2 = numeric(),
-                     col = character(), stringsAsFactors = F)
+                     col = character(), stringsAsFactors = FALSE)
 
 
   }
-
-
 
 
   # Modify according to parameters
@@ -246,8 +244,6 @@ coordMotifs <- function(motif, x = 0, y = 0, scalingX = 1, scalingY = 1) {
   #                    Disconnected
   # ---------------------------------------------------
   if (motif == 'di') pt <- data.frame(x = c(0,0,0), y = c(-1,0,1))
-
-
 
 
   # Modify according to parameters

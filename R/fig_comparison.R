@@ -86,15 +86,15 @@ fig_comparison <- function() {
   }
 
   cols <- c("#000000", gg_color_hue(2))
-  cols[2] <- darken(cols[2], 20)
-  cols[3] <- darken(cols[3], 20)
+  cols[2] <- graphicsutils::darken(cols[2], 20)
+  cols[3] <- graphicsutils::darken(cols[3], 20)
   cols <- paste0(cols, "77")
   cekm$col <- cols[1]
   cekm$col[cekm$Taxa %in% fish] <- cols[3]
 
   # Plot
   par(mar = c(4.5, 4.5, 2, 2))
-  plot0(x = c(0, max(cekm$cea, na.rm = TRUE)), y = c(0, max(cekm$ncea, na.rm = TRUE)))
+  graphicsutils::plot0(x = c(0, max(cekm$cea, na.rm = TRUE)), y = c(0, max(cekm$ncea, na.rm = TRUE)))
   axis(1)
   axis(2)
   mtext(side = 1, text = bquote(bold("Species-scale" ~ "cumulative" ~ "effects" ~ "/" ~ km^2)), line = 2.5, font = 2)

@@ -3,29 +3,29 @@
 #' @export
 
 out_species_contribution <- function() {
-  # Output 
-  out <- here::here("output","cea_species_contribution")
+  # Output
+  out <- here::here("output", "cea_species_contribution")
   rcea::chk_create(out)
-  
-  # Get species list from parameters 
-  param()  
-  
+
+  # Get species list from parameters
+  param()
+
   # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
   # Species contributions to indirect effect
-  folder <- here::here("output","ncea","species_contribution")
+  folder <- here::here("output", "ncea", "species_contribution")
   files <- dir(folder, full.names = TRUE)
   dat <- lapply(files, read.csv) |>
     data.table::rbindlist() |>
     dplyr::mutate(
-      dplyr::across(dplyr::where(is.numeric), ~ round(.x * 1e6,8))
-    ) 
+      dplyr::across(dplyr::where(is.numeric), ~ round(.x * 1e6, 8))
+    )
 
-    # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
+  # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
   # Network format species_contribution
   meta <- dat |>
     dplyr::rowwise() |>
     dplyr::mutate(contribution = sum(
-      dplyr::across(!vc_from & !vc), 
+      dplyr::across(!vc_from & !vc),
       na.rm = TRUE
     )) |>
     dplyr::select(vc, vc_from, contribution) |>
@@ -36,23 +36,23 @@ out_species_contribution <- function() {
   meta <- meta[, meta$vc]
   meta <- as.matrix(meta)
 
-  ## Insert missing species 
-  # Add missing species to network 
+  ## Insert missing species
+  # Add missing species to network
   uid <- !spList$shortname %in% colnames(meta)
   miss <- matrix(
     data = 0,
-    ncol = sum(uid), 
-    nrow = nrow(meta), 
+    ncol = sum(uid),
+    nrow = nrow(meta),
     dimnames = list(c(), spList$shortname[uid])
   )
   meta <- cbind(meta, miss)
-  for(i in 1:ncol(miss)) meta <- rbind(meta, 0)
+  for (i in 1:ncol(miss)) meta <- rbind(meta, 0)
   rownames(meta) <- colnames(meta)
   nm <- sort(colnames(meta))
   meta <- meta[nm, nm]
-  
+
   # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
-  # Species overal contribution to indirect effects 
+  # Species overal contribution to indirect effects
   sp_all <- dat |>
     dplyr::group_by(vc_from) |>
     dplyr::summarise(
@@ -61,9 +61,9 @@ out_species_contribution <- function() {
     dplyr::ungroup() |>
     dplyr::mutate(Total = rowSums(dplyr::across(dplyr::where(is.numeric)))) |>
     dplyr::arrange(dplyr::desc(Total))
-  
+
   # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
-  # Export 
+  # Export
   write.csv(dat, file = here::here(out, "species_contribution.csv"), row.names = FALSE)
   write.csv(sp_all, file = here::here(out, "species_contribution_total.csv"), row.names = FALSE)
   write.csv(meta, file = here::here(out, "species_contribution_network.csv"), row.names = FALSE)
