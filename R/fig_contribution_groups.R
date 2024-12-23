@@ -5,10 +5,8 @@ fig_contribution_groups <- function() {
   #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
   # Libraries
   #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
-  library(magrittr)
   library(raster)
   library(tidyverse)
-  library(graphicsutils)
   param()
 
   #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
@@ -184,7 +182,7 @@ fig_contribution_groups <- function() {
 
   yMax <- 1.4
   yMin <- -.9
-  graphicsutils::plot0(x = c(-1,(nrow(spGroup)+1)), y = c(yMin,yMax))
+  graphicsutils::plot0(x = c(-1, (nrow(spGroup) + 1)), y = c(yMin, yMax))
   
   #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
   # Graph elements
@@ -245,7 +243,7 @@ fig_contribution_groups <- function() {
   # Drivers legend
   yG = .3
   par(mar = c(.5,0,0,0), bg = bg)
-  plot0(x = c(1,7), y = c(0.2,-6.5))
+  graphicsutils::plot0(x = c(1,7), y = c(0.2,-6.5))
   # Groups names
   x = c(1,2.9,3.95,6.05)
   text(x = x, y = rep(0.15,4), labels = drGroup$group, font = 2, adj = c(0,.5), cex = .85)

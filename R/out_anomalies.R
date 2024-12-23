@@ -5,33 +5,33 @@
 out_anomalies <- function() {
   # Libraries
   library(stars)
-  library(magrittr)
 
-  # output 
-  output <- here::here("output","cea_anomalies")
+  # output
+  output <- here::here("output", "cea_anomalies")
   rcea::chk_create(output)
 
-  # Folders & input files 
-  ce <- here::here("output","ncea","net")
-  ci <- here::here("output","cea")
+  # Folders & input files
+  ce <- here::here("output", "ncea", "net")
+  ci <- here::here("output", "cea")
 
-  # Load all data 
+  # Load all data
   loadras <- function(input) {
     input <- dir(input, full.names = TRUE)
-    nm <- basename(input) |> stringr::str_replace_all(".tif","")
+    nm <- basename(input) |>
+      stringr::str_replace_all(".tif", "")
     lapply(input, function(x) {
       raster::stack(x) |>
-      sum()
+        sum()
     }) |>
-    raster::stack() |>
-    setNames(nm)
+      raster::stack() |>
+      setNames(nm)
   }
   ce <- loadras(ce)
   ci <- loadras(ci)
 
-  # Anomalies 
+  # Anomalies
   anomalies <- list()
-  for(i in 1:nlayers(ce)) {
+  for (i in 1:nlayers(ce)) {
     cn <- round(ce[[i]], 5) + 1
     dn <- round(ci[[i]], 5) + 1
     anomalies[[i]] <- log(cn / dn)
@@ -40,9 +40,9 @@ out_anomalies <- function() {
     sum(na.rm = TRUE)
 
   # Set values outside study region back to NA
-  load('./Data/FormatData/idBiotic.RData')
+  load("./Data/FormatData/idBiotic.RData")
   values(anomalies)[!idBiotic] <- NA
 
-  # Export 
+  # Export
   raster::writeRaster(anomalies, here::here(output, "anomalies.tif"))
 }

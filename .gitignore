@@ -48,13 +48,25 @@ vignettes/*.pdf
 .DS_Store
 
 ## Project-specific files
-data/
+data/Biotic/
+data/Drivers/
+data/input/
+data/Metaweb/
+data/Spatial/
+data/SpeciesList/
+data/Taxonomy/
+data/TrophicSensitivity/
+data/Vulnerability/
 output/
 submission/
-figures/
+
 
 ## Ignore specific file types
 *.pdf
 *.docx
 *.sh
+*.zip
+*.png
+*.xlsx
 
+!man/figures/logo.png

@@ -58,32 +58,32 @@ fig_method2 <- function() {
   # by Chris huh
   # http://phylopic.org/image/ce70490a-79a5-47fc-afb9-834e45803ab4/
   # License https://creativecommons.org/licenses/by-sa/3.0/
-  hump <- png::readPNG('./img/PhyloPic.ce70490a.Chris-huh.Balaenoptera-novaeangliae.png', native = T)
+  hump <- png::readPNG('./img/PhyloPic.ce70490a.Chris-huh.Balaenoptera-novaeangliae.png', native = TRUE)
 
   # Beluga whale - Delphinapterus leucas
   # by Xavier Giroux-Bougard
   # http://phylopic.org/image/f1367ab1-40cf-4e9a-a84b-37508f11a7c7/
-  bew <- png::readPNG('./img/PhyloPic.f1367ab1.Xavier-Giroux-Bougard.Delphinapterus_Delphinapterus-leucas_Monodontidae.png', native = T)
+  bew <- png::readPNG('./img/PhyloPic.f1367ab1.Xavier-Giroux-Bougard.Delphinapterus_Delphinapterus-leucas_Monodontidae.png', native = TRUE)
 
   # Atlantic cod - Gadus morhua
   # Milton Tan
   # http://phylopic.org/image/bba1800a-dd86-451d-a79b-c5944cfe5231/
-  cod <- png::readPNG('./img/PhyloPic.bba1800a.Milton-Tan.Gadariae_Gadidae_Gadiformes_Gadinae_Gadus_Gadus-morhua_Zeiogadaria.png', native = T)
+  cod <- png::readPNG('./img/PhyloPic.bba1800a.Milton-Tan.Gadariae_Gadidae_Gadiformes_Gadinae_Gadus_Gadus-morhua_Zeiogadaria.png', native = TRUE)
 
   # Capelin - Mallotus villosus
   # by xgirouxb
   # http://phylopic.org/image/f1f91d08-b850-4600-ad64-622ce87f0199/
-  cap <- png::readPNG('./img/PhyloPic.f1f91d08.xgirouxb.Osmeridae_Osmeriformes_Osmerinae_Osmerini_Osmeroidea_Osmeroidei_Thaleichthys_Thaleichthys-pacificus.png', native = T)
+  cap <- png::readPNG('./img/PhyloPic.f1f91d08.xgirouxb.Osmeridae_Osmeriformes_Osmerinae_Osmerini_Osmeroidea_Osmeroidei_Thaleichthys_Thaleichthys-pacificus.png', native = TRUE)
 
   # Krill - Meganyctiphanes norvegica
   # by Steven Haddock • Jellywatch.org
   # http://phylopic.org/image/44a3628d-aafd-45cc-97a6-1cb74bd43dec/
-  kri <- png::readPNG('./img/PhyloPic.44a3628d.Steven-Haddock-Jellywatch-org.Copepoda-Malacostraca_Eucarida_Eumalacostraca_Euphausiacea_Euphausiidae_Malacostraca.png', native = T)
+  kri <- png::readPNG('./img/PhyloPic.44a3628d.Steven-Haddock-Jellywatch-org.Copepoda-Malacostraca_Eucarida_Eumalacostraca_Euphausiacea_Euphausiidae_Malacostraca.png', native = TRUE)
 
   # Copepoda
   # by Joanna Wolfe
   # http://phylopic.org/image/c5dbd85a-c4be-4990-a369-c830ad23cb22/
-  cop <- png::readPNG('./img/PhyloPic.c5dbd85a.Joanna-Wolfe.Calanoida_Copepoda_Epacteriscidae_Erebonectes_Gymnoplea_Neocopepoda.png', native = T)
+  cop <- png::readPNG('./img/PhyloPic.c5dbd85a.Joanna-Wolfe.Calanoida_Copepoda_Epacteriscidae_Erebonectes_Gymnoplea_Neocopepoda.png', native = TRUE)
   cop[cop == 16777216] <-0
 
   # Pennatula
@@ -91,22 +91,22 @@ fig_method2 <- function() {
   # Author: Guillaume Dera
   # License: https://creativecommons.org/publicdomain/zero/1.0/ 
   # No changes were made
-  pen <- png::readPNG('img/Phylopic_pennatula.png', native = T)
+  pen <- png::readPNG('img/Phylopic_pennatula.png', native = TRUE)
 
   # Asteroidea
   # https://www.phylopic.org/images/c3b6f519-544c-4869-afca-3c5775df73ce/asteroidea
   # Author: Fernando Carezzano
   # License: https://creativecommons.org/publicdomain/zero/1.0/ 
   # No changes were made
-  ast <- png::readPNG('img/Phylopic_asteroidea.png', native = T)
+  ast <- png::readPNG('img/Phylopic_asteroidea.png', native = TRUE)
 
   # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
   # Drivers
-  SST <- png::readPNG('./img/SST.png', native = T) # modified from https://fontawesome.com/icons/thermometer-full?style=solid
-  Shipping <- png::readPNG('./img/ship-solid.png', native = T) # https://fontawesome.com/icons/ship?style=solid
-  DD <- png::readPNG('./img/trawl.png', native = T)
-  Acid <- png::readPNG('./img/Acid.png', native = T)
-  DNH <- png::readPNG('./img/DNH.png', native = T)
+  SST <- png::readPNG('./img/SST.png', native = TRUE) # modified from https://fontawesome.com/icons/thermometer-full?style=solid
+  Shipping <- png::readPNG('./img/ship-solid.png', native = TRUE) # https://fontawesome.com/icons/ship?style=solid
+  DD <- png::readPNG('./img/trawl.png', native = TRUE)
+  Acid <- png::readPNG('./img/Acid.png', native = TRUE)
+  DNH <- png::readPNG('./img/DNH.png', native = TRUE)
 
 
   #=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=#
@@ -775,15 +775,15 @@ fig_method2 <- function() {
   text(x = mean(x), y = .085, adj = .5, cex = .25, labels = latex2exp::TeX("\\textit{\\sum / n}"))
   
   # Letters
-  text(x = -1.045, y = .98, labels = "a", font = 2, cex = .45)
-  text(x = -1.045, y = .66, labels = "b", font = 2, cex = .45)
-  text(x = -1.045, y = .2, labels = "c", font = 2, cex = .45)
-  text(x = -.625, y = .59, labels = "d", font = 2, cex = .45)
-  text(x = -.55, y = .52, labels = "e", font = 2, cex = .45)
-  text(x = -.625, y = .975, labels = "f", font = 2, cex = .45)
-  text(x = -.22, y = .21, labels = "g", font = 2, cex = .45)
-  text(x = 0.27, y = .85, labels = "h", font = 2, cex = .45)
-  text(x = 0.27, y = .3, labels = "i", font = 2, cex = .45)
+  text(x = -1.045, y = .98, labels = "A", font = 2, cex = .45)
+  text(x = -1.045, y = .66, labels = "B", font = 2, cex = .45)
+  text(x = -1.045, y = .2, labels = "C", font = 2, cex = .45)
+  text(x = -.625, y = .59, labels = "D", font = 2, cex = .45)
+  text(x = -.55, y = .52, labels = "E", font = 2, cex = .45)
+  text(x = -.625, y = .975, labels = "F", font = 2, cex = .45)
+  text(x = -.22, y = .21, labels = "G", font = 2, cex = .45)
+  text(x = 0.27, y = .85, labels = "H", font = 2, cex = .45)
+  text(x = 0.27, y = .3, labels = "I", font = 2, cex = .45)
   
   dev.off()
   

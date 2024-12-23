@@ -6,7 +6,6 @@ fig_groups_spatial <- function() {
   library(raster)
   library(stars)
   library(sf)
-  library(graphicsutils)
   library(tidyverse)
   param()
   load('./Data/Spatial/egslSimple.RData') # Simple EGSL geometry
@@ -77,7 +76,7 @@ fig_groups_spatial <- function() {
   tit <- c('Invertebrates','Vertebrates')
   for(i in 1:2) {
     par(mar = c(0,0,0,0))
-    plot0()
+    graphicsutils::plot0()
     text(-1, 0, labels = tit[i], cex = 2, font = 2, adj = c(0,.5))
   }
 

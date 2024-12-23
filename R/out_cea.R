@@ -4,24 +4,24 @@
 
 cea <- function() {
   library(stars)
-  # Function to export stars objects 
+  # Function to export stars objects
   export_stars <- function(dat, out, n) {
-    # Create output 
-    out <- paste0(out,"/")
+    # Create output
+    out <- paste0(out, "/")
     rcea::chk_create(out)
     nm <- names(dat)
-    
-    # Export 
-    for(i in 1:n) {
+
+    # Export
+    for (i in 1:n) {
       stars::write_stars(
-        adrop(dat[i]), 
-        paste0(out,"/",nm[i],".tif")
+        adrop(dat[i]),
+        paste0(out, "/", nm[i], ".tif")
       )
     }
   }
 
   # Specify and create output folder
-  output <- here::here("output","cea")
+  output <- here::here("output", "cea")
   # output <- "~/scratch/output/cea/"
   rcea::chk_create(output)
 
@@ -33,6 +33,5 @@ cea <- function() {
 
   # Cumulative effects assessment
   halpern <- rcea::cea(drivers, biotic, species_sensitivity, "stars")
-  export_stars(halpern, output, n = n)  
+  export_stars(halpern, output, n = n)
 }
-

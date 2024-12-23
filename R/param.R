@@ -4,9 +4,7 @@
 
 param <- function() {
   # Libraries
-  library(graphicsutils)
   library(tidyverse)
-  library(magrittr)
   library(stringr)
   
   # Individual colors
@@ -71,7 +69,7 @@ param <- function() {
 
   # Groups
   nGroup <<- length(unique(drNames$group))
-  grNames <<- data.frame(accr = character(), name = character(), stringsAsFactors = F)
+  grNames <<- data.frame(accr = character(), name = character(), stringsAsFactors = FALSE)
   grNames[1, ] <<- c('Cl','Climate')
   grNames[2, ] <<- c('Co','Coastal')
   grNames[3, ] <<- c('F','Fisheries')
@@ -116,7 +114,7 @@ param <- function() {
   load('./Data/Taxonomy/TaxonomyEGSL.RData')
   load('./Data/FormatData/txNames.RData')
   load('./Data/FormatData/SpeciesList.RData')
-  taxonomy <- str_split(taxonomy$taxonomy, pattern = ' | ', simplify = T) %>%
+  taxonomy <- str_split(taxonomy$taxonomy, pattern = ' | ', simplify = TRUE) %>%
               .[, c(1,3,5,7,9,11)] %>%
               cbind(rownames(taxonomy), .) %>%
               set_colnames(c('Taxa','Kingdom','Phylum','Class','Order','Family','Genus')) %>%

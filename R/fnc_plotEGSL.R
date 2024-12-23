@@ -23,37 +23,37 @@
 #' @keywords plot, st. lawrence
 #'
 #' @examples
-#' # Basic map
-#' plotEGSL()
-#'
-#' # Plot grid
-#' plotEGSL(grid = T)
-#'
-#' # Quebec
-#' plotEGSL(layers = c('egslOutline','quebec','canada','usa'),
-#'          cols = c('#2196a8', '#25364A','#25364A','#C7CBCE'),
-#'          borders = '#f4f4f4',
-#'          northArrow = T,
-#'          mar = c(2,2,2,2),
-#'          box = T,
-#'          axes = 1:4,
-#'          extent = 'quebec')
-#'
-#' # Canada
-#' plotEGSL(layers = c('egslOutline','canada','usa'),
-#'         cols = c('#2196a8','#25364A','#C7CBCE'),
-#'         borders = '#f4f4f4',
-#'         northArrow = T,
-#'         mar = c(2,2,2,2),
-#'         box = T,
-#'         axes = 1:4,
-#'         extent = 'canada',
-#'         prj = slmetaPrj('world'))
-#'
-#' # Export
-#' jpeg('./essai.jpg', width = 5, height = 5, res = 300, units = 'in')
-#' plotEGSL(layers = 'egsl')
-#' dev.off()
+#'# # Basic map
+#'# plotEGSL()
+#'#
+#'# # Plot grid
+#'# plotEGSL(grid = TRUE)
+#'#
+#'# # Quebec
+#'# plotEGSL(layers = c('egslOutline','quebec','canada','usa'),
+#'#          cols = c('#2196a8', '#25364A','#25364A','#C7CBCE'),
+#'#          borders = '#f4f4f4',
+#'#          northArrow = TRUE,
+#'#          mar = c(2,2,2,2),
+#'#          box = TRUE,
+#'#          axes = 1:4,
+#'#          extent = 'quebec')
+#'#
+#'# # Canada
+#'# plotEGSL(layers = c('egslOutline','canada','usa'),
+#'#         cols = c('#2196a8','#25364A','#C7CBCE'),
+#'#         borders = '#f4f4f4',
+#'#         northArrow = TRUE,
+#'#         mar = c(2,2,2,2),
+#'#         box = TRUE,
+#'#         axes = 1:4,
+#'#         extent = 'canada',
+#'#         prj = slmetaPrj('world'))
+#'#
+#'# # Export
+#'# jpeg('./essai.jpg', width = 5, height = 5, res = 300, units = 'in')
+#'# plotEGSL(layers = 'egsl')
+#'# dev.off()
 
 
 # To do:
@@ -125,7 +125,7 @@ plotEGSL <- function(layers     = 'egslOutline',
 
   # Initiate plot
   par(mar = mar)
-  plot0(x = ext[c(1,3)],
+  graphicsutils::plot0(x = ext[c(1,3)],
         y = ext[c(2,4)],
         fill = background,
         grid.col = graticules)
