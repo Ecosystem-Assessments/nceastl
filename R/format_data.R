@@ -113,7 +113,7 @@ format_data <- function() {
 
   # Export
   save(metaweb, file = here::here(out, "metaweb.RData"))
-  write.csv(metaweb, file = here::here(out2, "metaweb.csv"), row.names = FALSE)
+  write.csv(metaweb, file = here::here(out2, "metaweb.csv"), row.names = TRUE)
 
   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
   # Species-specific vulnerabilities
@@ -139,7 +139,7 @@ format_data <- function() {
   # Export
   species_sensitivity <- vulnerability
   save(species_sensitivity, file = here::here(out, "species_sensitivity.RData"))
-  write.csv(species_sensitivity, file = here::here(out2, "species_sensitivity.csv"), row.names = FALSE)
+  write.csv(species_sensitivity, file = here::here(out2, "species_sensitivity.csv"), row.names = TRUE)
 
 
   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
@@ -176,7 +176,7 @@ format_data <- function() {
   save(drivers, file = here::here(out, "driversRaster.RData"))
 
   # Export human readable
-  write.csv(dr, file = here::here(out2, "dr"), row.names = FALSE)
+  write.csv(dr, file = here::here(out2, "dr.csv"), row.names = FALSE)
   out_drivers <- here::here(out2, "drivers")
   chk_create(out_drivers)
   for (i in seq_len(length(drivers))) {
