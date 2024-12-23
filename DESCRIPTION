@@ -1,5 +1,5 @@
 Package: nceastl  
-Type: Research compendium
+Type: Package
 Title: Research compendium for the assessment of the effects of global changes on the ecological communities of the St. Lawrence System. 
 Version: 1.0.0
 Authors@R: c(
@@ -15,29 +15,43 @@ License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
 Depends: 
     R (>= 4.0)
 Imports: 
+    colorspace,
     data.table,
     dplyr,
-    eaMethods,
     exactextractr,
     fasterize,
     fs,
+    globe,
     glue,
     graphicsutils,
     here,
     iEat,
+    latex2exp,
+    magick,
+    magrittr,
     pipedat,
-    mapview,
+    plotrix,
+    purrr,
     randomForest,
     raster,
     rcea,
+    rmarkdown,
     sf,
     stars,
     stringr,
+    tidyverse,
     units,
     vroom,
     whisker,
     yaml
+Remotes: 
+    Ecosystem-Assessments/eaMethods,
+    david-beauchesne/iEat,
+    Ecosystem-Assessments/pipedat,
+    Ecosystem-Assessments/rcea,
+    inSileco/graphicsutils
+
